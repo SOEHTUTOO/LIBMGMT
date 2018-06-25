@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 20, 2018, 9:47:26 AM
+    Author     : SPELL
+*/
+
+.root{
+    
+    -fx-background-color: #111111;
+    
+}
+
+.button{
+    
+    -fx-border-color: yellow;
+    -fx-border-width: 1px;
+    -fx-border-radius: 30px;
+    -fx-background-color: black;
+    -fx-background-radius: 30px;
+    -fx-text-fill: white;
+    -fx-pref-width: 130px;
+    -fx-pref-height: 50px;
+    
+}
+
+.tab {
+    
+    -fx-background-color: #111111;
+    -fx-pref-height: 50px;
+    
+}
+
+.tab-header-background{
+    
+    -fx-background-color: #111111;
+    -fx-pref-height: 50px;
+    
+}
+
+.menu-bar{
+    
+    -fx-background-color: #111111;
+    
+}
+
+.menu .label{
+      
+   -fx-text-fill: white;
+    
+}
+
+.context-menu{
+    
+    -fx-background-color: #111111;
+    
+}
+
+

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" stylesheets="@../css/default-theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.management.controller.HomeController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="490.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField fx:id="bookSearchField" focusColor="WHITE" labelFloat="true" onAction="#searchBook" prefWidth="250.0" promptText="Search With Book ID" unFocusColor="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="350.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="bookTitle" text="Title" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="bookAuthor" text="Author" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="bookPublisher" text="Publisher" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="bookStatus" text="Available" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField fx:id="memberSearchField" focusColor="WHITE" labelFloat="true" onAction="#searchMember" prefWidth="250.0" promptText="Search With Member ID" unFocusColor="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="350.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="memberName" text="Name" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="memberMobile" text="Mobile" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="memberAddress" text="Address" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <JFXButton fx:id="issueBtn" onAction="#issueBook" prefHeight="50.0" prefWidth="100.0" stylesheets="@../css/default-theme.css" text="Issue Book">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Issue/Renew">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="490.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXTextField fx:id="issueSearchField" focusColor="WHITE" labelFloat="true" maxWidth="300.0" onAction="#searchIssue" prefHeight="35.0" prefWidth="50.0" promptText="Search With Book ID" unFocusColor="#fffdfd" />
+                              <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="300.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="issueTitle" text="Title" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="issueAuthor" text="Author" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="issueDate" text="Issue Date" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="300.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="issueName" text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="issueMobile" text="Mobile" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="issueCount" text="Count" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <JFXButton fx:id="submitBtn" onAction="#submitBook" prefHeight="50.0" prefWidth="150.0" stylesheets="@../css/default-theme.css" text="Submit">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="renewBtn" onAction="#renewBook" prefHeight="50.0" prefWidth="150.0" stylesheets="@../css/default-theme.css" text="Renew">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+   <top>
+      <MenuBar stylesheets="@../css/default-theme.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="prefItem" mnemonicParsing="false" onAction="#openSetting" text="Preference" />
+              <MenuItem fx:id="closeItem" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="bookBtn" onAction="#showAllBook" prefHeight="50.0" prefWidth="100.0" stylesheets="@../css/default-theme.css" text="BOOKS">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/booklist.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="memberBtn" onAction="#showAllMember" prefHeight="50.0" prefWidth="100.0" stylesheets="@../css/default-theme.css" text="MEMBERS">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/memberlist.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="addBookBtn" onAction="#openAddBookWindow" prefHeight="50.0" prefWidth="100.0" stylesheets="@../css/default-theme.css" text="ADD BOOK">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/addbook.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="addMemberBtn" onAction="#openAddMemberWindow" prefHeight="50.0" prefWidth="100.0" stylesheets="@../css/default-theme.css" text="ADD MEMBER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/addmember.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>
